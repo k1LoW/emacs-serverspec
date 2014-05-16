@@ -1,0 +1,6 @@
+# name : windows_host_fix
+# condition: serverspec
+# --
+describe windows_host_fix('${1:***}') do
+  ${2:it \{ should be_installed \}}
+end

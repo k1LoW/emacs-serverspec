@@ -1,0 +1,6 @@
+# name : file
+# condition: serverspec
+# --
+describe file('${1:/etc/passwd}') do
+  ${2:it \{ should be_file \}}
+end

@@ -1,0 +1,6 @@
+# name : interface
+# condition: serverspec
+# --
+describe interface('${1:eth0}') do
+  ${2:its(:speed) \{ should eq 1000 \}}
+end

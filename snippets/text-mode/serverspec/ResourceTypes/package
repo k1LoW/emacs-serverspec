@@ -1,0 +1,6 @@
+# name : package
+# condition: serverspec
+# --
+describe package('${1:httpd}') do
+  ${2:it \{ should be_installed \}}
+end

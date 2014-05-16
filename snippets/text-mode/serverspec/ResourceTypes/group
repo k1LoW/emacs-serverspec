@@ -1,0 +1,6 @@
+# name : group
+# condition: serverspec
+# --
+describe group('${1:wheel}') do
+  $2{:it \{ should exist \}}
+end

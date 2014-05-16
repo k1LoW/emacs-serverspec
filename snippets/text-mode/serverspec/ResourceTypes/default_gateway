@@ -1,0 +1,7 @@
+# name : default_gateway
+# condition: serverspec
+# --
+describe default_gateway do
+  ${1:its(:ipaddress) \{ should eq '192.168.10.1' \}}
+  ${2:its(:interface) \{ should eq 'br0'          \}}
+end

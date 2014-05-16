@@ -1,0 +1,6 @@
+# name : windows_scheduled_task
+# condition: serverspec
+# -- 
+describe windows_scheduled_task('${1:rpool}') do
+  ${2:it \{ should exist \}}
+end

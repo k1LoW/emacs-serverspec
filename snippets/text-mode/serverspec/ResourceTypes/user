@@ -1,0 +1,6 @@
+# name : user
+# condition: serverspec
+# --
+describe user('${1:root}') do
+  ${2:it \{ should exist \}}
+end

@@ -1,0 +1,6 @@
+# name : iptables
+# condition: serverspec
+# --
+describe iptables do
+  ${1:it \{ should have_rule('-P INPUT ACCEPT') \}}
+end

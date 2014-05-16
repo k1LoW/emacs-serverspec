@@ -1,0 +1,6 @@
+# name : command
+# condition: serverspec
+# --
+describe command('${1:whoami}') do
+  ${2:it \{ should return_stdout 'root' \}}
+end

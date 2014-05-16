@@ -1,0 +1,8 @@
+# name : php_config
+# condition: serverspec
+# --
+describe 'PHP config parameters' do
+  context  php_config('${1:default_mimetype}') do
+    ${2:its(:value) \{ should eq 'text/html' \}}
+  end
+end

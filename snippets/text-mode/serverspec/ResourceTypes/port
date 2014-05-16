@@ -1,0 +1,6 @@
+# name : port
+# condition: serverspec
+# --
+describe port(${1:80}) do
+  ${2:it \{ should be_listening \}}
+end

@@ -1,0 +1,6 @@
+# name : windows_feature
+# condition: serverspec
+# --
+describe windows_feature('${1:Minesweeper}') do
+  ${2:it\{ should be_installed \}}
+end

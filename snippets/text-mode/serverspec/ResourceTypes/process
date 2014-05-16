@@ -1,0 +1,6 @@
+# name : process
+# condition: serverspec
+# --
+describe process('${1:memcached}') do
+    ${2:its(:args) \{ should match /-c 32000\\b/ \}}
+end

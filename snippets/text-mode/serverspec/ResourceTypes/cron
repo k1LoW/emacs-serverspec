@@ -1,0 +1,6 @@
+# name : cron
+# condition: serverspec
+# --
+describe cron do
+  ${1:it \{ should have_entry '* * * * * /usr/local/bin/foo' \}}
+end

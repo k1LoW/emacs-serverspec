@@ -1,0 +1,6 @@
+# name : mail_alias
+# condition: serverspec
+# --
+describe mail_alias('${1:daemon}') do
+  ${2:it \{ should be_aliased_to 'root' \}}
+end

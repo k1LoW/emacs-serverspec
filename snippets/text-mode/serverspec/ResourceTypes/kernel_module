@@ -1,0 +1,6 @@
+# name : kernel_module
+# condition: serverspec
+# --
+describe kernel_module('${1:virtio_balloon}') do
+  ${2:it \{ should be_loaded \}}
+end

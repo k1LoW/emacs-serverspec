@@ -1,0 +1,6 @@
+# name : iis_app_pool
+# condition: serverspec
+# --
+describe iis_app_pool('${1:Default App Pool}') do
+  ${2:it\{ should exist \}}
+end

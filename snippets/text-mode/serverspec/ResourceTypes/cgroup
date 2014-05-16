@@ -1,0 +1,6 @@
+# name : cgroup
+# condition: serverspec
+# --
+describe cgroup('${1:group1}') do
+  ${2:its('cpuset.cpus') \{ should eq 1 \}}
+end

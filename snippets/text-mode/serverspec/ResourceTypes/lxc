@@ -1,0 +1,6 @@
+# name : lxc
+# condition: serverspec
+# --
+describe lxc('${1:ct01}') do
+  ${2:it \{ should exist \}}
+end

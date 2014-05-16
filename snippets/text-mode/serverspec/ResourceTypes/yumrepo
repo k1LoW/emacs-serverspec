@@ -1,0 +1,6 @@
+# name : yumrepo
+# condition: serverspec
+# --
+describe yumrepo('${1:epel}') do
+  ${2:it \{ should exist \}}
+end

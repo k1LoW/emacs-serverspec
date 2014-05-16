@@ -1,0 +1,8 @@
+# name : linux_kernel_parameter
+# condition: serverspec
+# --
+describe 'Linux kernel parameters' do
+  context linux_kernel_parameter('${1:net.ipv4.tcp_syncookies}') do 
+    ${2:its(:value) \{ should eq 1 \}}
+  end
+end

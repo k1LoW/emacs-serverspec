@@ -1,0 +1,6 @@
+# name : service
+# condition: serverspec
+# --
+describe service('${1:ntpd}') do
+  ${2:it \{ should be_enabled \}}
+end
