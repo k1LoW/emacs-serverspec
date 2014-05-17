@@ -12,7 +12,9 @@ It's available on [Melpa](http://melpa.milkbox.net/)
 
     M-x package-install serverspec
 
-## Enable minor mode
+## Usage
+
+### Enable minor mode
 
     M-x serverspec
 
@@ -20,16 +22,16 @@ or hook
 
     (add-hook 'ruby-mode-hook '(lambda () (serverspec 1)))
 
-## Functions
+### Functions
 
-### `serverspec::find-spec-files`
+#### serverspec::find-spec-files
 
 List up `*_spec.rb` files.
 
-## Snippets for yasnippet
+### Snippets for yasnippet
 
 - Serverspec resource types snippet
 
-## Dictionary for auto-complete
+### Dictionary for auto-complete
 
 - Serverspec matcher dictionary
