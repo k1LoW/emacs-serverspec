@@ -17,7 +17,7 @@
 ;; along with this program; if not, write to the Free Software
 ;; Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
 
-;; Version: 0.0.1
+;; Version: 0.0.2
 ;; Author: k1LoW (Kenichirou Oyama), <k1lowxb [at] gmail [dot] com> <k1low [at] 101000lab [dot] org>
 ;; URL: http://101000lab.org
 ;; Package-Requires: ((dash "2.6.0") (s "1.9.0") (f "0.16.2") (helm "1.6.1"))
@@ -78,6 +78,9 @@
 
 (defvar serverspec::spec-path nil
   "Serverspec spec directory path.")
+
+(defvar serverspec::hook nil
+  "Hook.")
 
 ;;;###autoload
 (define-minor-mode serverspec
@@ -147,18 +150,27 @@
   (interactive)
   (helm-other-buffer `(serverspec::helm-spec-files-source) "*helm spec*"))
 
-(defconst serverspec::snippets-dir (file-name-directory (or (buffer-file-name)
+(defconst serverspec::dir (file-name-directory (or (buffer-file-name)
                                                             load-file-name)))
 
 ;;;###autoload
 (defun serverspec::snippets-initialize ()
-  (let ((snip-dir (expand-file-name "snippets" serverspec::snippets-dir)))
+  (let ((snip-dir (expand-file-name "snippets" serverspec::dir)))
     (add-to-list 'yas-snippet-dirs snip-dir t)
     (yas-load-directory snip-dir)))
 
 ;;;###autoload
 (eval-after-load 'yasnippet
   '(serverspec::snippets-initialize))
+
+;;;###autoload
+(defun serverspec::dict-initialize ()
+  (let ((dict-dir (expand-file-name "dict" serverspec::dir)))
+    (add-to-list 'ac-dictionary-files (f-join dict-dir "serverspec") t)))
+
+;;;###autoload
+(add-hook 'serverspec::hook
+  'serverspec::dict-initialize)
 
 (provide 'serverspec)
 
