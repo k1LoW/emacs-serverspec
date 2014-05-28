@@ -17,7 +17,7 @@
 ;; along with this program; if not, write to the Free Software
 ;; Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
 
-;; Version: 0.0.2
+;; Version: 0.0.3
 ;; Author: k1LoW (Kenichirou Oyama), <k1lowxb [at] gmail [dot] com> <k1low [at] 101000lab [dot] org>
 ;; URL: http://101000lab.org
 ;; Package-Requires: ((dash "2.6.0") (s "1.9.0") (f "0.16.2") (helm "1.6.1"))
@@ -92,6 +92,7 @@
         (setq minor-mode-map-alist
               (cons (cons 'serverspec serverspec::key-map)
                     minor-mode-map-alist))
+        (serverspec::dict-initialize)
         (run-hooks 'serverspec::hook))
     nil))
 
@@ -167,10 +168,6 @@
 (defun serverspec::dict-initialize ()
   (let ((dict-dir (expand-file-name "dict" serverspec::dir)))
     (add-to-list 'ac-dictionary-files (f-join dict-dir "serverspec") t)))
-
-;;;###autoload
-(add-hook 'serverspec::hook
-  'serverspec::dict-initialize)
 
 (provide 'serverspec)
 
