@@ -1,0 +1,6 @@
+# name : ppa
+# condition: serverspec
+# --
+describe ppa('${1:launchpad-username/ppa-name}') do
+  ${2:it \{ should exist \}}
+end
