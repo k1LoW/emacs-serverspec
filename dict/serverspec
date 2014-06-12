@@ -9,7 +9,6 @@ be_resolvable
 be_running
 be_writable
 belong_to_group
-contain
 have_entry
 have_rule
 match_md5checksum
