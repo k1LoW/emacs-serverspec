@@ -1,6 +1,5 @@
 require 'rake'
 require 'rspec/core/rake_task'
-require 'ci/reporter/rake/rspec'
 
 task :default => [:spec]
 RSpec::Core::RakeTask.new(:spec) do |t|
