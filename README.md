@@ -1,4 +1,4 @@
-# Serverspec minor mode
+# Serverspec minor mode [![Build Status](https://travis-ci.org/k1LoW/emacs-serverspec.svg?branch=master)](https://travis-ci.org/k1LoW/emacs-serverspec)
 
 ## Requirement
 
