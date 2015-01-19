@@ -5,7 +5,7 @@ snippets_resource_type_dir = File.join(File.dirname(__FILE__), *%w[.. .. .. snip
 
 RSpec.describe 'ResourceType' do
   Dir::open(resource_type_dir).each {|f|
-    next if f == "." || f == ".." || f == "base.rb"
+    next if f == "." || f == ".." || f == "base.rb" || f == "docker_base.rb"
     resource_type_name = File.basename(f, ".rb")
     it resource_type_name + " snippets exits" do
       expect(File).to exist(File.join(snippets_resource_type_dir, resource_type_name))

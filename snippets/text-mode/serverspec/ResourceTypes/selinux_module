@@ -1,0 +1,6 @@
+# name : selinux_module
+# condition: serverspec
+# --
+describe selinux_module('${1:apache}') do
+  ${2:it \{ should be_enabled \}}
+end

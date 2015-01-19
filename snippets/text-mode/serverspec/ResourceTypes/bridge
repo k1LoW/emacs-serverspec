@@ -1,0 +1,6 @@
+# name : bridge
+# condition: serverspec
+# --
+describe bridge('${1:br0}') do
+  ${2:it \{ should exist \}}
+end
