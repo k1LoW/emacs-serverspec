@@ -44,6 +44,7 @@ have_site_bindings
 have_start_mode
 have_uid
 have_value
+have_volume
 have_virtual_dir
 have_interface
 in_app_pool
@@ -54,5 +55,6 @@ its(:sha256sum)
 its(:stdout)
 its(:stderr)
 its(:exit_status)
+its(:inspection)
 running
 speed

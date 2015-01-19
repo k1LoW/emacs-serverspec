@@ -1,0 +1,6 @@
+# name : ip6tables
+# condition: serverspec
+# --
+describe ip6tables do
+  ${1:it \{ should have_rule('-P INPUT ACCEPT') \}}
+end

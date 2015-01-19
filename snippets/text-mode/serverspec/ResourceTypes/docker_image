@@ -1,0 +1,6 @@
+# name : docker_image
+# condition: serverspec
+# --
+describe docker_image('${1:busybox:latest}') do
+  ${2:it \{ should exist \}}
+end

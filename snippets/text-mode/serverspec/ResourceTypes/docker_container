@@ -1,0 +1,6 @@
+# name : docker_container
+# condition: serverspec
+# --
+describe docker_container('${1:c1}') do
+  ${2:it \{ should exist \}}
+end
