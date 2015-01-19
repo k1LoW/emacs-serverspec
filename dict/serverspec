@@ -9,10 +9,10 @@ be_resolvable
 be_running
 be_writable
 belong_to_group
+belong_to_primary_group
+contain
 have_entry
 have_rule
-match_md5checksum
-match_sha256checksum
-return_exit_status
-return_stderr
-return_stdout
+have_site_bindings
+have_site_application
+have_virtual_dir
