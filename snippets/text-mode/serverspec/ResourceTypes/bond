@@ -1,0 +1,6 @@
+# name : bond
+# condition: serverspec
+# --
+describe bond('${1:bond0}') do
+  ${2:it \{ should exist \}}
+end

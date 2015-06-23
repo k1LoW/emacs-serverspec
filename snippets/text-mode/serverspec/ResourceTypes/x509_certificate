@@ -1,0 +1,6 @@
+# name : x509_certificate
+# condition: serverspec
+# --
+describe x509_certificate('${1:some_cert.pem}') do
+  ${2:it \{ should be_certificate \}}
+end

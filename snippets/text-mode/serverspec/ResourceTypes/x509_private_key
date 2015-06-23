@@ -1,0 +1,6 @@
+# name : x509_private_key
+# condition: serverspec
+# --
+describe x509_private_key('${1:/my/private/server-key.pem}') do
+  ${2:it \{ should_not be_encrypted \}}
+end

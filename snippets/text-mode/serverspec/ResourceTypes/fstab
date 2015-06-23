@@ -1,0 +1,6 @@
+# name : fstab
+# condition: serverspec
+# --
+describe fstab do
+  ${1:it \{ should have_entry( :mount_point => '/mnt' ) \}}
+end

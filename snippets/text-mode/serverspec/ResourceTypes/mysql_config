@@ -1,0 +1,8 @@
+# name : mysql_config
+# condition: serverspec
+# --
+describe 'MySQL config parameters' do
+  context mysql_config('${1:innodb-buffer-pool-size}') do
+    ${2:its(:value) \{ should > 100000000 \}}
+  end
+end
